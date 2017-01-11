@@ -234,11 +234,6 @@ def crawl(access_token,index):
  
     #gather our page level JSON Data
     
-    #access_token = "CAACEdEose0cBAJVhgB0lylZA0FJBBcyl7h7crCKtynizRwGZBuivdBHhRogSRr8VPqonohZANgkpaUaNuU5cRHZCqvio8O6DLjYTbZCt6cjxkcww7a4LMd0vLAUZCkoEqG4jfS0EztQnMVIdjJl6cUSOIXeF5Hi7RJ6d6bX0NWPZBVwHVqrqfuZCOrBZACw7yIOZA50Rg055LYxnE6FPtHiYZBv" 
-    #current_page = graph_url + company + '?access_token=' + access_token
-    #json_fbpage = render_to_json(current_page)
-    #extract post data
-    #post_url = create_post_url( graph_url + company, access_token)
     #after refreshing access token
     #post_url = 'https://graph.facebook.com/v2.5/632474226810626/posts?limit=25&__paging_token=enc_AdBw7ITgoJMBm2ZCZChllfTKc9oRlhSBGsDUS9eZBFoxaOHxm6ZAWZAbGahAwx9ngIyBFt8bHgw8GHe1VG45HZApgMcOZB3XZBnl0AOAiZCFgze687ncENgZDZD&access_token=CAACEdEose0cBAJVhgB0lylZA0FJBBcyl7h7crCKtynizRwGZBuivdBHhRogSRr8VPqonohZANgkpaUaNuU5cRHZCqvio8O6DLjYTbZCt6cjxkcww7a4LMd0vLAUZCkoEqG4jfS0EztQnMVIdjJl6cUSOIXeF5Hi7RJ6d6bX0NWPZBVwHVqrqfuZCOrBZACw7yIOZA50Rg055LYxnE6FPtHiYZBv&until=1456066857'
     last_text_file=open('logs/last_log%d.txt' % index,"r")
@@ -248,7 +243,6 @@ def crawl(access_token,index):
     url2=post_url.split('&access_token=')[1].split('&')[1]
     post_url=url + '&access_token=' + access_token + '&' + url2
     scrape_posts_by_date(post_url, last_crawl, access_token,company,index)
-    #data = []
     
 
 if __name__ == "__main__":
